@@ -1,1 +1,0 @@
-# HAIL-ESO-Battery-Forecasting
