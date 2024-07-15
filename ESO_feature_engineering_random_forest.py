@@ -9,7 +9,6 @@ from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-
 # 데이터 로드
 file_path = "./data/train_data.csv"
 train_set = pd.read_csv(file_path, skip_blank_lines=True)
