@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import torch
-from torch import nn, Tensor, optim, cuda
+from torch import cuda
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split, TimeSeriesSplit
 from sklearn.ensemble import RandomForestRegressor
@@ -19,7 +19,7 @@ print(train_set.tail())
 if torch.backends.mps.is_available():
     device = 'mps'
     mps_device = torch.device(device)
-    torch.cuda.manual_seed_all(777)
+    cuda.manual_seed_all(777)
     print(device)
 else:
     print("MPS device not found.")
@@ -125,3 +125,5 @@ plt.xlabel('Actual Values')
 plt.ylabel('Predicted Values')
 plt.title('Actual vs Predicted Values')
 plt.show()
+
+
